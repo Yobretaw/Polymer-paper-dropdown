@@ -1,0 +1,41 @@
+{
+  "name": "polymer-paper-dropdown",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Yobretaw/Polymer-paper-dropdown",
+  "authors": [
+    "Yobretaw <youkeshen01@gmail.com>"
+  ],
+  "description": "The missing paper-dropdown element of Polymer.",
+  "main": "paper-dropdown.html",
+  "keywords": [
+    "Polymer",
+    "web-components"
+    "paper",
+    "dropdown",
+    "paper-dropdown"
+  ],
+
+  "depedencies": {
+    "polymer": "Polymer/polymer#>=0.3.0 <1.0.0",
+    "platform": "Polymer/platform",
+    "core-icon": "Polymer/core-icon#>=0.3.0 <1.0.0",
+    "core-menu": "Polymer/core-menu#>=0.3.0 <1.0.0",
+    "core-overlay": "Polymer/core-overlay#>=0.3.0 <1.0.0",
+    "core-transition": "Polymer/core-transition#>=0.3.0 <1.0.0",
+    "core-animation": "Polymer/core-animation#>=0.3.0 <1.0.0",
+    "paper-button": "Polymer/paper-button#>=0.3.0 <1.0.0",
+    "paper-item": "Polymer/paper-item#>=0.3.0 <1.0.0",
+    "paper-focusable": "Polymer/paper-focusable#>=0.3.0 <1.0.0",
+    "paper-shadow": "Polymer/paper-shadow#>=0.3.0 <1.0.0",
+  },
+
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

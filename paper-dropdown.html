@@ -1,0 +1,101 @@
+<!--
+					paper-dropdown
+
+Usage:
+
+    <paper-dropdown icon="menu" value="English">
+      <div>English</div>
+      <div>French</div>
+      <div>Spanish</div>
+      <div>Germany</div>
+    </paper-menu-button>
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../core-icon/core-icon.html">
+<link rel="import" href="../core-menu/core-menu.html">
+<link rel="import" href="../paper-item/paper-item.html">
+<link rel="import" href="../paper-focusable/paper-focusable.html">
+<link rel="import" href="../paper-shadow/paper-shadow.html">
+<link rel="import" href="paper-dropdown-overlay.html">
+<link rel="import" href="paper-dropdown-transition.html">
+
+
+<polymer-element name="paper-menu-button-overlay-container" noscript>
+	<template>
+		<content></content>
+	</template>
+</polymer-element>
+
+<polymer-element name="paper-dropdown" extends="paper-focusable" attributes="value delay" on-tap="{{tapAction}}">
+	<template>
+		<link rel="stylesheet" href="paper-dropdown.css">
+		<paper-menu-button-overlay target="{{$.overlay}}" relatedTarget="{{}}" opened="{{opened}}" transition="paper-menu-button-transition-top-left-{{delay}}"></paper-menu-button-overlay>
+
+		<paper-menu-button-overlay-container id="overlay">
+			<paper-shadow target="{{$.overlayBg}}" z="0" hasPosition></paper-shadow>
+			<div class="paper-menu-button-overlay-ink"></div>
+			<div id="overlayBg" class="paper-menu-button-overlay-bg"></div>
+			<core-menu id="menu" valueattr="value">
+				<content></content>
+			</core-menu>
+		</paper-menu-button-overlay-container>
+		<paper-item id="dropdownButton" icon="arrow-drop-down" label="{{value}}"></paper-item>
+
+
+	</template>
+	<script>
+		Polymer('paper-dropdown', {
+
+			publish: {
+
+				/**
+				 * If true, this menu is currently visible.
+				 *
+				 * @attribute opened
+				 * @type boolean
+				 * @default false
+				 */
+				opened: { value: false, reflect: true },
+
+				/**
+				 *  The initial text/value shown in the dropdown button
+				 */
+				value: { value: null, reflect: true },
+
+				/**
+				 * The delay for the overlay to expand
+				 *
+				 * @attribute delay
+				 * @type number (0, 100, 200, 300, ..., 900, 1000)
+				 * @default 300
+				 */
+				delay: { value: 300 }
+			},
+
+			tapAction: function() {
+				if (this.disabled) {
+					return;
+				}
+
+				this.super();
+				this.toggle();
+			},
+
+			/**
+			 * Toggle the opened state of the menu.
+			 *
+			 * @method toggle
+			 */
+			toggle: function() {
+				if(this.opened) {
+					this.value = this.$.menu.selected;
+				}
+
+				this.opened = !this.opened;
+			}
+
+		});
+	</script>
+</polymer-element>
