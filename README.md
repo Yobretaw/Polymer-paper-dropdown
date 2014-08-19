@@ -5,7 +5,7 @@ The missing paper-dropdown element of Polymer.
 
 Install:
 
-bower install --save Polymer-paper-dropdown
+  bower install --save Polymer-paper-dropdown
 
 Usage:
 
