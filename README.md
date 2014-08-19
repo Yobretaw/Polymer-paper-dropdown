@@ -10,7 +10,7 @@ Usage:
 <link rel="import" href="components/Polymer-paper-dropdown/paper-dropdown.html">
 
 
-<paper-dropdown value="initValue" delay="300">
+<paper-dropdown value="initValue" duration="300">
   <paper-item value="itemValue1">item1</paper-item>
   <paper-item value="itemValue2">item2</paper-item>
   <paper-item value="itemValue3">item3</paper-item>
