@@ -28,10 +28,10 @@ Usage:
 	</template>
 </polymer-element>
 
-<polymer-element name="paper-dropdown" extends="paper-focusable" attributes="value delay" on-tap="{{tapAction}}">
+<polymer-element name="paper-dropdown" extends="paper-focusable" attributes="value duration" on-tap="{{tapAction}}">
 	<template>
 		<link rel="stylesheet" href="paper-dropdown.css">
-		<paper-menu-button-overlay target="{{$.overlay}}" relatedTarget="{{}}" opened="{{opened}}" transition="paper-menu-button-transition-top-left-{{delay}}"></paper-menu-button-overlay>
+		<paper-menu-button-overlay target="{{$.overlay}}" relatedTarget="{{}}" opened="{{opened}}" transition="paper-menu-button-transition-top-left-{{duration}}"></paper-menu-button-overlay>
 
 		<paper-menu-button-overlay-container id="overlay">
 			<paper-shadow target="{{$.overlayBg}}" z="0" hasPosition></paper-shadow>
@@ -71,7 +71,7 @@ Usage:
 				 * @type number (0, 100, 200, 300, ..., 900, 1000)
 				 * @default 300
 				 */
-				delay: { value: 300 }
+				duration: { value: 300 }
 			},
 
 			tapAction: function() {
