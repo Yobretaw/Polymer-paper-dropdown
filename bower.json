@@ -14,7 +14,6 @@
     "dropdown",
     "paper-dropdown"
   ],
-
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.3.0 <1.0.0",
     "platform": "Polymer/platform",
@@ -28,7 +27,6 @@
     "paper-focusable": "Polymer/paper-focusable#>=0.3.0 <1.0.0",
     "paper-shadow": "Polymer/paper-shadow#>=0.3.0 <1.0.0"
   },
-
   "license": "MIT",
   "private": true,
   "ignore": [
