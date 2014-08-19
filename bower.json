@@ -15,7 +15,7 @@
     "paper-dropdown"
   ],
 
-  "depedencies": {
+  "dependencies": {
     "polymer": "Polymer/polymer#>=0.3.0 <1.0.0",
     "platform": "Polymer/platform",
     "core-icon": "Polymer/core-icon#>=0.3.0 <1.0.0",
