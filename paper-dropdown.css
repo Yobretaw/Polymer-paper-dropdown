@@ -82,5 +82,8 @@ core-icon::shadow svg {
 #dropdownButton {
     background-color: #316ba6;
     color: #ffffff;
-    width: 110px;
+    width: 115px;
+
+    margin: 0;
+    border-radius: 3px;
 }
